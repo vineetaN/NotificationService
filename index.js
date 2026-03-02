@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const env = require("dotenv");
 const mongoose = require("mongoose");
+const PORT = process.env.PORT || 3001;
 
 const Cron = require("./crons/cron")
 
@@ -19,7 +20,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 ticketRoutes(app);
 
-app.listen(process.env.PORT, async () => {
+app.listen(PORT, async () => {
   console.log("Notification server started")
  // sendMail(process.env.EMAIL , process.env.EMAIL_PASS)
 
