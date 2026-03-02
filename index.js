@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const env = require("dotenv");
 const mongoose = require("mongoose");
-const PORT = process.env.PORT || 3001;
+
 
 const Cron = require("./crons/cron")
 
@@ -14,6 +14,7 @@ const ticketRoutes = require("./routes/ticket.routes")
 
 
 env.config();
+const PORT = process.env.PORT || 3001;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
