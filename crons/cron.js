@@ -3,7 +3,8 @@ const Ticket = require("../models/ticketNotification");
 const Mailer = require("../services/email.service");
 
 const mailerCron = () => {
-const mailer = Mailer(process.env.EMAIL , process.env.EMAIL_PASS);
+//const mailer = Mailer(process.env.EMAIL , process.env.EMAIL_PASS);
+const mailer = Mailer();
 
 cron.schedule("*/2 * * * *" , async () => {
   console.log("Executing cron again ");
