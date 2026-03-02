@@ -36,6 +36,6 @@ cron.schedule("*/2 * * * *" , async () => {
 });
 }
 
-module.exports ={ mailerCron}
+module.exports = {mailerCron}
 
 
